@@ -1,0 +1,44 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.servicios {
+    @include m.grid (1,1rem);
+    @include m.tablet {
+        @include m.grid (3,2rem);
+    }
+    text-align: center;
+    padding: 2rem;
+
+    .servicio{
+        margin-bottom: 1.5rem;
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+        @include m.tablet {
+            margin-bottom: 0;
+        }
+        i{
+            height: 7rem;
+            width: 7rem;
+            font-size: 2.5rem;
+            line-height: 7rem;
+            color: v.$negro;
+            background-color: v.$primario;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        h3{
+            font-size: 2rem;
+            padding: 1rem 0;
+            text-transform: uppercase;
+            margin: 0;
+            color: v.$blanco;
+            font-weight: 500;
+        }
+        p{
+            font-size: 1.5rem;
+            color: v.$grisLight;
+            margin: 0;
+        }
+    }
+}

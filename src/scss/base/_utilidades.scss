@@ -1,0 +1,51 @@
+@use 'variables' as v; 
+@use 'base/mixins' as m;
+.text-center {
+    text-align: center;
+}
+
+.bg-primario {
+    background-color: v.$primario;
+}
+
+.contenedor {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.seccion {
+    padding: 3rem 0;
+    @include m.tablet {
+        padding: 8rem 0;
+    }
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 3rem;
+    h3 {
+        margin: 1rem 0;
+        font-size: 3rem;
+        color: v.$blanco;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    img {
+        margin: 0 auto;
+    }
+}
+.boton{
+    display: inline-block;
+    margin-top: 1rem;
+    cursor: pointer;
+    color:v.$blanco;
+    border:.2rem solid rgba(255,255,255,.3);
+    background: no-repeat;
+    font-size: 1.7rem;
+    padding:1rem 3rem;
+    transition: .2s linear;
+    &:hover{
+       color:v.$negro;
+       background: v.$blanco;
+    }
+ }

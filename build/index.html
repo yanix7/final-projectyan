@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurgerShop</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet" href="build/css/app.css">
+    <!-- awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- aos library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+
+        <div id="menu-btn" class="fas fa-bars icons"></div>
+        <div id="search-btn" class="fas fa-search icons"></div>
+
+        <nav class="navegacion">
+            
+            <a href="#menu">Menu</a>
+            <a href="#informacion">Info</a>
+            <span class="espacio"></span>
+            <a href="#resenas">Reviews</a>
+            <a href="#contact">Contact</a>
+            <a href="#blogs">Blogs</a>
+        </nav>
+
+            <ul>
+                <li class="submenu">
+                    <img src="src/img/cart.png" id="img-carrito">
+                    <div id="carrito">
+                            
+                        <table id="lista-carrito">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <p class="precio-total"><span id="precioTotal"></span></p>
+                        <a href="#" id="vaciar-carrito">Vaciar Carrito</a>
+                        <a href="#" id="realizar-pedido">Realizar Pedido</a>
+                    </div>
+                </li>
+            </ul>
+
+        <a href="#inicio" class="logo"><img src="build/img/logo.png" alt="logo"></a>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="solo ilustrativo" id="search-box">
+            <label for="search-box" class="fas fa-search icons"></label>
+        </form>
+    </header>
+  
+    <section class="inicio" id="inicio">
+
+        <div class="contenido">
+            <img data-aos="fade-up" data-aos-delay="150" src="build/img/burger-baner.png" alt="imagen hamburguesa">
+            <h3 data-aos="fade-up" data-aos-delay="300"> SO MEAT IT WILL DRIVE YOU CRAZY</h3>
+            <p data-aos="fade-up" data-aos-delay="450">Welcome to the best burger shop</p>
+            <a data-aos="fade-up" data-aos-delay="600" href="#menu" class="boton">Our Menu</a>
+        </div>
+
+    </section>
+
+    <section class="servicios">
+
+        <div class="servicio" data-aos="fade-up" data-aos-delay="150">
+            <i class="fas fa-hamburger"></i>
+            <h3>THE BEST QUALITY</h3>
+            
+        </div>
+        <div class="servicio" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>FREE SHIPPING</h3>
+            
+        </div>
+        <div class="servicio" data-aos="fade-up" data-aos-delay="450">
+            <i class="fas fa-headset"></i>
+            <h3>SUPPORT 24/7</h3>
+           
+        </div>
+    
+    </section>
+
+    <section class="menu" id="menu">
+
+        <div class="heading">
+            <img src="build/img/title-img.png" alt="titulo">
+            <h3>Our Menu</h3>
+        </div>
+        
+        <div class="menu__grid" id="listaHamburguesas">
+
+            <div data-aos="fade-up" data-aos-delay="150" class="hamburguesa">
+                <img class="imagen" src="build/img/product-1.png" alt="hamburguesa">
+                <div class="contenido">
+                    <div class="estrellas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3 class="nombre">Burger doble</h3>
+                    <div class="precio">$4</div>
+                    <a href="#" class="boton agregar-carrito" data-id="1">Add to Cart</a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="300" class="hamburguesa">
+                <img class="imagen" src="build/img/product-2.png" alt="hamburguesa">
+                <div class="contenido">
+                    <div class="estrellas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3 class="nombre">EGG BURGER</h3>
+                    <div class="precio">$3</div>
+                    <a href="#" class="boton agregar-carrito" data-id="2">Add to Cart</a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="450" class="hamburguesa">
+                <img class="imagen" src="build/img/product-3.png" alt="hamburguesa">
+                <div class="contenido">
+                    <div class="estrellas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3 class="nombre">Burger vegana</h3>
+                    <div class="precio">$4</div>
+                    <a href="#" class="boton agregar-carrito" data-id="3">Add to Cart</a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="600" class="hamburguesa">
+                <img class="imagen" src="build/img/product-4.png" alt="hamburguesa">
+                <div class="contenido">
+                    <div class="estrellas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3 class="nombre">Burger XXL</h3>
+                    <div class="precio">$6</div>
+                    <a href="#" class="boton agregar-carrito" data-id="4">Add to Cart</a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="750" class="hamburguesa">
+                <img class="imagen" src="build/img/product-5.png" alt="hamburguesa">
+                <div class="contenido">
+                    <div class="estrellas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3 class="nombre">FISH BURGER</h3>
+                    <div class="precio">$5</div>
+                    <a href="#" class="boton agregar-carrito" data-id="5">Add to Cart</a>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" data-aos-delay="900" class="hamburguesa">
+                <img class="imagen" src="build/img/product-6.png" alt="hamburguesa">
+                <div class="contenido">
+                    <div class="estrellas">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3 class="nombre">Burger simple</h3>
+                    <div class="precio">$4</div>
+                    <a href="#" class="boton agregar-carrito" data-id="6">Add to Cart</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="informacion" id="informacion">
+        <div class="informacion__imagen" data-aos="fade-right" data-aos-delay="150">
+            <img src="build/img/about-img.png" alt="informacion">
+        </div>
+        <div class="informacion__contenido" data-aos="fade-left" data-aos-delay="300">
+            <h3 class="titulo">WHY ARE THEY THE BEST?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro fugiat temporibus perferendis totam aperiam debitis amet incidunt nam illo impedit repudiandae placeat, itaque veniam laudantium architecto, ut veritatis atque vero.</p>
+            <div class="iconos">
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="resenas" id="resenas">
+        <div class="heading">
+            <img src="build/img/title-img.png" alt="heading">
+            <h3>BUYERS' REVIEWS</h3>
+        </div>
+
+        <div class="resenas__grid">
+
+            <div class="resena"  data-aos="fade-up" data-aos-delay="150">
+                <img src="build/img/pic-1.png" alt="imagen resena">
+                <h3>Yan Hurban</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat odit alias impedit aliquam, amet, nihil veniam omnis, doloremque dolore unde cumque.</p>
+                <div class="estrellas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="resena"  data-aos="fade-up" data-aos-delay="300">
+                <img src="build/img/pic-2.png" alt="imagen resena">
+                <h3>Yan Hurban</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat odit alias impedit aliquam, amet, nihil veniam omnis, doloremque dolore unde cumque.</p>
+                <div class="estrellas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="resena"  data-aos="fade-up" data-aos-delay="450">
+                <img src="build/img/pic-3.png" alt="imagen resena">
+                <h3>Yan Hurban</h3 Costamagnah3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat odit alias impedit aliquam, amet, nihil veniam omnis, doloremque dolore unde cumque.</p>
+                <div class="estrellas">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <div class="heading">
+            <img src="build/img/title-img.png" alt="heading">
+            <h3>Contactanos</h3>
+        </div>
+
+        <div class="contacto__flex">
+
+           
+
+            <div class="formulario">
+
+                <div class="iconos">
+
+                    <div class="icono" data-aos="fade-up" data-aos-delay="150">
+                        <i class="fas fa-map"></i>
+                        <h3>Direccion:</h3>
+                        <p>Ukraine, Kyiv</p>
+                    </div>
+
+                    <div class="icono" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email: </h3>
+                        <p>yangurban7@gmail.com</p>
+                    </div>
+
+                    <div class="icono" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-phone"></i>
+                        <h3>Celular:</h3>
+                        <p>+380661329360</p>
+                        <p>+380661329360</p>
+                    </div>
+
+                </div>
+
+                <form action="">
+                    <input data-aos="fade-up" data-aos-delay="150" type="text" placeholder="Nombre completo" class="box">
+                    <input data-aos="fade-up" data-aos-delay="300" type="email" placeholder="Email" class="box">
+                    <input data-aos="fade-up" data-aos-delay="450" type="tel" placeholder="numero de celular" class="box">
+                    <textarea data-aos="fade-up" data-aos-delay="600" name="" placeholder="especificaciones" class="box" id="" cols="30" rows="10"></textarea>
+                    <input data-aos="fade-up" data-aos-delay="750" type="submit" value="Enviar mensaje" class="boton">
+                </form>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="blogs" id="blogs">
+        <div class="heading">
+            <img src="build/img/title-img.png" alt="imagen">
+            <h3>Blogs</h3>
+        </div>
+
+        <div class="blogs__grid">
+        
+            <div class="blog" data-aos="fade-up" data-aos-delay="150">
+                <div class="imagen">
+                   <img src="build/img/blog-1.jpg" alt="">
+                   <div class="iconos">
+                      <a href="#"> <i class="fas fa-calendar"></i> 30 de Mayo, 2022 </a>
+                      <a href="#"> <i class="fas fa-user"></i> por Lucas </a>
+                   </div>
+                </div>
+                <div class="contenido">
+                   <h3>Titulo del blog.</h3>
+                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, maxime.</p>
+                   <a href="#" class="boton">Leer mas</a>
+                </div>
+            </div>
+            
+            <div class="blog" data-aos="fade-up" data-aos-delay="300">
+                <div class="imagen">
+                   <img src="build/img/blog-2.jpg" alt="">
+                   <div class="iconos">
+                      <a href="#"> <i class="fas fa-calendar"></i> 30 de Mayo, 2022 </a>
+                      <a href="#"> <i class="fas fa-user"></i> por Lucas </a>
+                   </div>
+                </div>
+                <div class="contenido">
+                   <h3>Titulo del blog.</h3>
+                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, maxime.</p>
+                   <a href="#" class="boton">Leer mas</a>
+                </div>
+            </div>
+
+            <div class="blog" data-aos="fade-up" data-aos-delay="450">
+                <div class="imagen">
+                   <img src="build/img/blog-3.jpg" alt="">
+                   <div class="iconos">
+                      <a href="#"> <i class="fas fa-calendar"></i> 30 de Mayo, 2022 </a>
+                      <a href="#"> <i class="fas fa-user"></i> por Lucas </a>
+                   </div>
+                </div>
+                <div class="contenido">
+                   <h3>Titulo del blog.</h3>
+                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, maxime.</p>
+                   <a href="#" class="boton">Leer mas</a>
+                </div>
+            </div>
+         
+        </div>
+    </section>
+
+    <section class="footer">
+
+        <div class="links">
+            
+            <a class="boton" href="#menu">Menu</a>
+            <a class="boton" href="#informacion">Info</a>
+            <a class="boton" href="#resenas">REVIEWS</a>
+            <a class="boton" href="#contacto">Contacto</a>
+            <a class="boton" href="#blogs">Blogs</a>
+        </div>
+     
+        <p class="credit">&copy; copyright 2022 <span>Yan Hurban</span> </p> 
+    </section>
+
+    <script src="src/js/app.js"></script>
+    <script src="https://kit.fontawesome.com/535a09cd05.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+           duration: 800,
+        });
+    </script>
+</body>
+</html>

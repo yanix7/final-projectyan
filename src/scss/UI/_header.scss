@@ -1,0 +1,195 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: v.$negro;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    @include m.desktop {
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 3rem;
+    }
+
+    .icons{
+        color: v.$blanco;
+        cursor: pointer;
+        font-size: 2.5rem;
+        &:hover{
+            color: v.$primario;
+        }
+        .fa-times {
+            transform: rotate(180deg);
+        }
+    }
+    
+    #menu-btn {
+        display: inline-block;
+        @include m.desktop {
+            display: none;
+        }
+    }
+
+    .navegacion {        
+        position: absolute;
+        background-color: v.$negro;
+        top: 99%;
+        left: 0;
+        right: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path .2s linear;
+
+        @include m.desktop {
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            clip-path: none;
+            gap: 6rem;
+        }
+            &.active{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+        a {
+            color: v.$blanco;
+            font-size: 2rem;
+            margin: 2rem ;
+            display: block;
+            transition: all .2s linear;
+            &:hover {
+                color: v.$primario;
+                text-decoration: underline;
+                text-underline-offset: 1rem;
+            }
+            @include m.desktop {
+                margin: 0;    
+            }
+        }
+
+        .espacio {
+            display: block;
+            @include m.desktop {
+                display:inline-block;
+                width: 16rem;
+            }
+        }
+    }
+
+    .logo {
+        position: absolute;
+        transform: translateX(-80%);
+        left: 37%;   
+
+        @include m.tablet{
+            transform: translateX(-170%);
+        }
+
+        @include m.desktop{
+            transform: translateX(37%);
+        }
+
+        img {
+            width: 15rem;
+        }
+    }
+
+    .search-form{
+        height: 7rem;
+        padding: 0 2rem;
+        border-top: .1rem solid v.$grisLight;
+        display: flex;
+        align-items: center;
+        background-color: v.$negro;
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path .2s;
+        &.active{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        input {
+            width: 100%;
+            background: none;
+            text-transform: none;
+            color: v.$blanco;
+            font-size: 1.6rem;
+            border-style: none;
+            &:focus-visible{
+                outline: none;
+            }
+        }
+    }
+
+}
+
+.submenu {
+    position: relative;
+    cursor: pointer;
+
+    #carrito{
+        display: none;
+        
+        #vaciar-carrito{
+            @include m.boton(red, v.$blanco);
+            border: 2px solid red;
+            border-radius: 12px;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+        #realizar-pedido{
+            @include m.boton(v.$primario, v.$blanco);
+            border: 2px solid v.$primario;
+            border-radius: 12px;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        table{
+            color: v.$blanco;
+
+            th{
+                font-weight: 500;
+            }
+            
+        }
+    }
+
+    &:hover #carrito{
+        display: block;
+        position: absolute;
+        right:0;
+    
+        top:100%;
+        z-index: 1;
+        background-color: #000000ed;
+        padding: 20px 10px;
+        min-height: 200px;
+        min-width: 300px;
+    }
+
+    .borrar-hamburguesa{
+        background-color: rgb(192, 15, 15);
+        color: v.$blanco;
+        border-radius: 40%;
+        padding: 3px;
+
+        &:hover{
+            color: v.$negro;
+        }
+    }
+
+    .precio-total{
+        color: v.$blanco;
+    }
+}

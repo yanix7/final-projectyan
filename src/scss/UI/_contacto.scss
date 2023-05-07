@@ -1,0 +1,95 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contacto{
+
+    &__flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        .mapa {
+            width: 100%;
+            flex: 1 1 40rem;
+        }
+    }
+}
+
+.formulario {
+    flex: 1 1 40rem;
+
+    .iconos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-bottom: 3rem;
+
+        .icono{
+            text-align: center;
+            flex: 1 1 17rem;
+
+            i{
+                height: 6rem;
+                width: 6rem;
+                line-height: 6rem;
+                border-radius: 50%;
+                background-color: v.$primario;
+                color: v.$negro;
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+                text-transform: uppercase;
+                color:v.$blanco;
+                margin: 0;
+            }
+            p{
+                font-size: 1.5rem;
+                line-height: 2;
+                color: v.$grisLight;
+                margin: 0;
+            }
+        }
+    }
+
+    form {
+        text-align: center;
+
+        .box {
+            padding:1.2rem 1.4rem;
+            font-size: 1.6rem;
+            color:v.$blanco;
+            background: none;
+            border:.2rem solid rgba(255,255,255,.3);
+            text-transform: none;
+            width: 100%;
+            margin:.7rem 0;
+
+            &:focus {
+                border-color: v.$primario;
+            }
+
+            textarea {
+                height: 15rem;
+                resize: none;
+            }
+        }
+        .boton {
+            display: inline-block;
+            margin-top: 1rem;
+            cursor: pointer;
+            color:v.$blanco;
+            border:.2rem solid rgba(255,255,255,.3);
+            background: no-repeat;
+            font-size: 1.7rem;
+            padding:1rem 3rem;
+
+            &:hover{
+                color:v.$negro;
+                background: v.$blanco;
+            }
+        }
+    }
+}

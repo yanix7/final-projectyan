@@ -1,0 +1,69 @@
+@use 'variables' as v; 
+@use 'mixins' as m; 
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+    overflow-x: hidden;
+    &::-webkit-scrollbar{
+        width: 1rem;
+     }
+  
+     &::-webkit-scrollbar-track{
+        background: v.$negro;
+     }
+  
+     &::-webkit-scrollbar-thumb{
+        background: v.$primario;
+        border-radius: 5rem;
+    }
+    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: v.$fuentePrincipal;
+    font-size: 1.6rem;
+    background-image: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+}
+p {
+    font-size: 2rem;
+    line-height: 2;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    padding: 3rem 9%;
+}
+h3 {
+    font-size: 2.8rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+@media (max-width:480px){
+
+    html{
+       font-size: 50%;
+    }
+ 
+ }

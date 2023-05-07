@@ -1,0 +1,22 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer{
+    text-align: center;
+    background: linear-gradient(transparent, v.$negro) ;
+    .links{
+        a{
+            margin: 1rem;
+        }
+    }
+
+    .credit{
+        font-size: 2rem;
+        line-height: 2;
+        color: v.$grisLight;
+
+        span {
+            color: v.$primario;
+        }
+    }
+}

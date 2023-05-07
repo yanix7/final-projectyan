@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.menu {
+
+    .menu__grid {
+        @include m.grid (1,3rem);
+        @include m.tablet {
+            @include m.grid (3,1rem);
+        }
+    }
+}
+
+.hamburguesa {
+    text-align: center;
+
+    img {
+        width: 25rem;
+        margin: 0 auto;
+    }
+
+    &:hover img{
+        transition: all .2s linear;
+        transform: translateY(1rem);
+    }
+
+
+    .contenido {
+        padding: 1rem 0;
+
+        h3 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: v.$blanco;
+            margin: 0;
+        }        
+        .precio {
+            font-size: 2.5rem;
+            line-height: 2;
+            color: v.$grisLight;
+            margin: 0;
+        }
+
+        .estrellas{
+            margin-bottom: 2rem;
+            i{
+                color: v.$primario;
+                font-size: 1.7rem;
+            }
+        }
+    }
+
+}
+

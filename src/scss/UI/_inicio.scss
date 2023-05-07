@@ -1,0 +1,46 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.inicio {
+    margin-top: 7rem;
+    background-image: url(../img/home-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .contenido {
+        max-width: 70rem;
+        margin: 0 auto;
+        text-align: center;
+
+        h3{
+            color: v.$blanco;
+            text-transform: uppercase;
+            font-size: 4rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        p{
+            margin: 0;
+            padding: 2rem 0;
+            color: v.$grisLight;
+            font-size: 1.7rem;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            cursor: pointer;
+            color: v.$blanco;
+            border: .2rem solid rgba(255,255,255,.3);
+            background: no-repeat;
+            font-size: 1.7rem;
+            padding:1rem 3rem;
+            transition: all .2s;
+            &:hover{
+               color:v.$negro;
+               background: v.$blanco;
+            }
+        }
+    }
+}

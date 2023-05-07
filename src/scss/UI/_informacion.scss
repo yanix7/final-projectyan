@@ -1,0 +1,54 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.informacion {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    &__imagen {
+        flex: 1 1 40rem;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__contenido {
+        flex: 1 1 40rem;
+
+        .titulo {
+            font-size: 2rem;
+            text-transform: uppercase;
+            color: v.$blanco;
+            margin: 0;
+        }
+        p{
+            padding: 2rem 0;
+            font-size: 1.5rem;
+            line-height: 2;
+            color: v.$grisLight;
+            margin: 0;
+        }
+        .iconos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1rem 0 2rem 0 ;
+
+            h3 {
+                flex: 1 1 16rem;
+                font-size: 1.6rem;
+                line-height: 2;
+                color: v.$grisLight;
+                margin: 0;
+                i{
+                    padding-right: .5rem;
+                    color: v.$primario;
+                    
+                }
+            }
+        }
+    }
+}
